@@ -1,0 +1,148 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>NOTAS PWA</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
+    <link rel="manifest" href="./manifest.json" />
+</head>
+
+<body>
+
+
+    <nav class="navbar bg-light fixed-top">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="#">Notas PWA</a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar"
+            aria-controls="offcanvasNavbar">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="offcanvas offcanvas-start" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
+            <div class="offcanvas-header">
+              <h5 class="offcanvas-title" id="offcanvasNavbarLabel">Notas PWA</h5>
+              <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+            </div>
+            <div class="offcanvas-body">
+              <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
+                <li class="nav-item">
+                  <a class="nav-link active" aria-current="page" href="/pages/all-notes.html">Mis notas</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="/pages/recent.html">Más recientes</a>
+                </li>
+                <li class="nav-item dropdown">
+                  <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                    aria-expanded="false">
+                    Categorías
+                  </a>
+                  <ul class="dropdown-menu">
+                    <li><a class="dropdown-item" href="#">Personales</a></li>
+                    <li><a class="dropdown-item" href="#">Clases</a></li>
+                    <li>
+                      <hr class="dropdown-divider">
+                    </li>
+                    <li><a class="dropdown-item" href="#">Aplicacions</a></li>
+                  </ul>
+                </li>
+              </ul>
+              <form class="d-flex mt-3" role="search">
+                <input class="form-control me-2" type="search" placeholder="Buscar" aria-label="Search">
+                <button class="btn btn-outline-success" type="submit">Buscar</button>
+              </form>
+            </div>
+          </div>
+        </div>
+      </nav>
+    <br>
+    <br>
+
+    <div class="container pt-4">
+        <h1>Hello, world!</h1>
+
+
+
+        <hr>
+        <h3>Mis notas</h3>
+        <div class="card mt-2">
+            <div class="card-body">
+                <div class="container text-center">
+                    <div class="col-12 ">
+                        <!--imagen de nota-->
+                        <img src="https://ichef.bbci.co.uk/news/640/cpsprodpb/E7E9/production/_117696395_eso2105a.jpg"
+                            class="img-fluid rounded" style="width: 30%;" alt="...">
+                    </div>
+                    <div class="col-12">
+                        <!--Texto de la nota-->
+                        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Explicabo accusantium illo ipsam
+                        mollitia adipisci
+                        veniam. Vitae consequatur cum impedit quia temporibus alias veniam aliquid maiores itaque
+                        repellat! Eius,
+                        sed possimus!
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="card mt-2">
+            <div class="card-body">
+                <div class="container text-center">
+                    <div class="col-12 ">
+                        <!--imagen de nota-->
+                        <img src="https://ichef.bbci.co.uk/news/640/cpsprodpb/E7E9/production/_117696395_eso2105a.jpg"
+                            class="img-fluid rounded" style="width: 30%;" alt="...">
+                    </div>
+                    <div class="col-12">
+                        <!--Texto de la nota-->
+                        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Explicabo accusantium illo ipsam
+                        mollitia adipisci
+                        veniam. Vitae consequatur cum impedit quia temporibus alias veniam aliquid maiores itaque
+                        repellat! Eius,
+                        sed possimus!
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="card mt-2">
+            <div class="card-body">
+                <div class="container text-center">
+                    <div class="col-12 ">
+                        <!--imagen de nota-->
+                        <img src="https://ichef.bbci.co.uk/news/640/cpsprodpb/E7E9/production/_117696395_eso2105a.jpg"
+                            class="img-fluid rounded" style="width: 30%;" alt="...">
+                    </div>
+                    <div class="col-12">
+                        <!--Texto de la nota-->
+                        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Explicabo accusantium illo ipsam
+                        mollitia adipisci
+                        veniam. Vitae consequatur cum impedit quia temporibus alias veniam aliquid maiores itaque
+                        repellat! Eius,
+                        sed possimus!
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-u1OknCvxWvY5kfmNBILK2hRnQC3Pr17a+RTT6rIHI7NnikvbZlHgTPOOmMi466C8"
+        crossorigin="anonymous"></script>
+        <script>
+            if (navigator.serviceWorker) {
+                //¿identificar si estoy en local o github?
+                let URLactual = window.location;
+                //alert(URLactual)
+                //if (URLactual.includes('localhost')) {
+                navigator.serviceWorker.register('./sw.js');
+                //}
+    
+            }
+        </script>
+</body>
+
+</html>
